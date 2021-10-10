@@ -1,0 +1,16 @@
+The script run_analysis.R downloads files associatd with an experiment involving 30 subjects performing six different activities while wearing a smartphone that collected accelerometer and gyroscopic data. The cript compiles the files downloaded into a single table, and then trims the table down into a table of only theaverage for the mean and standard deviation measurements.  
+
+1. The first step it top download the dataset into the folder UCI HAR Dataset.
+
+2. The files downloaded are read into a variety of data frames using read.table(), and some of the frames are assigned column headings.
+
+3.  The data frames are merged using cbind() and rbind().
+
+4. A new frame is made by using select() from the dpylr package in order to select only the mean and standard variation variables.
+
+5. The codes in the new data frame are changed from numerical activity codes into the descriptive activity names.
+
+6. The titles of the variables are modified using gsub() to make them more descriptive.
+
+7. The resulting table is written into a file using write.table().
+	
